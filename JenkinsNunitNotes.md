@@ -1,4 +1,4 @@
-# Jenkins ile NUnit Testi Koşturma 
+# Jenkins ile NUnit Test Koşumu ve Raporlanması 
 
  Selenium WebDriver ile yazdıgınız otomasyon testlerinizi aşağıdaki adımları takip ederek, Jenkins ile tetikleyebilirsiniz.<br>
 
@@ -16,7 +16,7 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 
 <br>
 
-![Choose Project Type](images/1.Create_FreestyleProject.png) 
+![Choose Project Type](images/1.CreateFreestyleProject.png) 
 
 <br> 
 
@@ -66,21 +66,31 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 >### 4.1. Testlerin Çalıştırılması
 <br>
 
->#### - 4.1.1 Tüm Test Projesi koşturmak istiyorsanız
-> > ### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj`
+>#### -  4.1.1 Tüm Test Projesi koşturmak istiyorsanız
+<br>
+
+`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj`
+
 <br>
 
 >#### - 4.1.2 Bir Test class'ını koşturmak istiyorsanız 
-> > ### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"`
+<br>
+
+`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"`
 
 <br>
 
 >#### - 4.1.3 Bir Test Classı içindeki tek bir test methodunu koşturmak istiyorsanız
-> > ### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"`
+<br>
+
+`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"`
+
 <br>
 
 > #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root altına Test Result xml dokümanını olusturma
-> > ### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml`
+<br>
+
+`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml`
 
 <br>
 
@@ -93,7 +103,7 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 
 <br>
 
-![Choose Project Type](images/6.Add_PublishNUnitTestResultReports_PublishHTMLReports.png)  
+![Choose Project Type](images/6.AddPublishNUnitTestResultReportsPublishHTMLReports.png)  
 
 <br>
 
