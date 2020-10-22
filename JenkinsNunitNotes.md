@@ -69,28 +69,28 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 >#### -  4.1.1 Tüm Test Projesi koşturmak istiyorsanız
 <br>
 
-`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj`
+### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj`
 
 <br>
 
 >#### - 4.1.2 Bir Test class'ını koşturmak istiyorsanız 
 <br>
 
-`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"`
+### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"`
 
 <br>
 
 >#### - 4.1.3 Bir Test Classı içindeki tek bir test methodunu koşturmak istiyorsanız
 <br>
 
-`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"`
+### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"`
 
 <br>
 
 > #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root altına Test Result xml dokümanını olusturma
 <br>
 
-`nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml`
+### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml`
 
 <br>
 
