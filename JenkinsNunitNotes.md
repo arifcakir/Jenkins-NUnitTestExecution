@@ -49,15 +49,12 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 
 <br>
 
-<br>
 
 > ## 3. Solution'ın **Build** alınması
 
  Paketlerin derlenmesi sonrası projenizi build edebilirsiniz. Build için aşağıdaki scripti kullanabilirsiniz.
 
 ```MSBuild -t:build "%WORKSPACE%\AmazonTest.sln"```
-
-<br>
 
 <br>
 
@@ -84,14 +81,14 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 >#### - 4.1.3 Bir Test Classı içindeki tek bir test methodunu koşturmak istiyorsanız
 <br>
 
-### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"`
+```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"```
 
 <br>
 
 > #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root altına Test Result xml dokümanını olusturma
 <br>
 
-### `nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml`
+```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml```
 
 <br>
 
