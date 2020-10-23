@@ -85,7 +85,7 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 
 <br>
 
-> #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root klasörüne Test Result xml dokümanını olusturmak istiyorsanız
+> #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root klasörüne Test Result xml dokümanını oluşturmak istiyorsanız
 <br>
 
 ```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml```
