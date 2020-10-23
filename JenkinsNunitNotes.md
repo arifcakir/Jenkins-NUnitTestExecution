@@ -45,7 +45,9 @@ Scriptlerimizi yazabilmek için Yapılandırma (Configure) alanından hangi scri
 > ## 2. NuGet paketlerinin **Restore** edilmesi
 Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini saglamamız gerekiyor. Restore için aşağıdaki scripti kullanabilirsiniz.
 
-```nuget restore "%WORKSPACE%\AmazonTest.sln"```
+```
+nuget restore "%WORKSPACE%\AmazonTest.sln"
+```
 
 <br>
 
@@ -54,7 +56,9 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 
  Paketlerin derlenmesi sonrası projenizi build edebilirsiniz. Build için aşağıdaki scripti kullanabilirsiniz.
 
-```MSBuild -t:build "%WORKSPACE%\AmazonTest.sln"```
+```
+MSBuild -t:build "%WORKSPACE%\AmazonTest.sln"
+```
 
 <br>
 
@@ -67,28 +71,36 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 >#### -  4.1.1 Tüm Test Projesi koşturmak istiyorsanız
 <br>
 
-```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj```
+```
+nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj
+```
 
 <br>
 
 >#### - 4.1.2 Bir Test class'ını koşturmak istiyorsanız
 <br>
 
-```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"```
+```
+nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"
+```
 
 <br>
 
 >#### - 4.1.3 Bir Test Classı içindeki tek bir test methodunu koşturmak istiyorsanız
 <br>
 
-```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"```
+```
+nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateComputerOrderTest"
+```
 
 <br>
 
 > #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root klasörüne Test Result xml dokümanını oluşturmak istiyorsanız
 <br>
 
-```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml```
+```
+nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml
+```
 
 <br>
 
