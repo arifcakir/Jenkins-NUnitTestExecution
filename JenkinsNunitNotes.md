@@ -20,21 +20,21 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 
 <br> 
 
-    Proje oluşturulduktan sonra ilk olarak testleri koşturacagınız agentı seçebiliriniz.
+ Proje oluşturulduktan sonra ilk olarak testleri koşturacagınız agentı seçebiliriniz.
 
 <br>
 
 ![Choose Project Type](images/2.ChooseRunAgent.png) 
 
 > ## 1. Projenin Agent'ın kurulu olduğu server'a klonlanması
-    Projenizin bulundugu kaynak kod aracından ilgili repository seçip klonlama işlemini gerçekleştirebilirsiniz.
+Projenizin bulundugu kaynak kod aracından ilgili repository seçip klonlama işlemini gerçekleştirebilirsiniz.
 <br>
 
 ![Choose Project Type](images/3.ConnectedtSourceCode.png)  
 
 <br> 
 
-    Scriptlerimizi yazabilmek için Yapılandırma (Configure) alanından hangi script dilini kullanmak istiyorsanız seçim yapabilirsiniz. Burada Windows Batch komutu ile ilerleyeceğiz.
+Scriptlerimizi yazabilmek için Yapılandırma (Configure) alanından hangi script dilini kullanmak istiyorsanız seçim yapabilirsiniz. Burada Windows Batch komutu ile ilerleyeceğiz.
 
 <br>
 
@@ -43,7 +43,7 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 <br>
 
 > ## 2. NuGet paketlerinin **Restore** edilmesi
-    Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini saglamamız gerekiyor. Restore için aşağıdaki scripti kullanabilirsiniz.
+Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini saglamamız gerekiyor. Restore için aşağıdaki scripti kullanabilirsiniz.
 
 ### `nuget restore "%WORKSPACE%\AmazonTest.sln"`
 
@@ -52,7 +52,8 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 <br>
 
 > ## 3. Solution'ın **Build** alınması
-    Paketlerin derlenmesi sonrası projenizi build edebilirsiniz. Build için aşağıdaki scripti kullanabilirsiniz.
+
+ Paketlerin derlenmesi sonrası projenizi build edebilirsiniz. Build için aşağıdaki scripti kullanabilirsiniz.
 
 ### `MSBuild -t:build "%WORKSPACE%\AmazonTest.sln"`
 
@@ -99,7 +100,7 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 <br>
 
 >### 4.2. Testlerin Raporlanması
-    Test sonuçlarının raporlanması için; koşum sonrası oluşan "TestResult.xml" ve projemizde kullandıgımız ExtentReport ile oluşturdugumuz html formatındaki dokümanları kullacağız. Öncelikle "Yapılandırma Sonrası Aksiyonlar" alanından ilgili raporları ekleyeceğiz.
+ Test sonuçlarının raporlanması için; koşum sonrası oluşan "TestResult.xml" ve projemizde kullandıgımız ExtentReport ile oluşturdugumuz html formatındaki dokümanları kullacağız. Öncelikle "Yapılandırma Sonrası Aksiyonlar" alanından ilgili raporları ekleyeceğiz.
 
 <br>
 
@@ -108,7 +109,7 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 <br>
 
 > #### - 4.2.1 Publish NUnit Test Result Report kullanımı
-    Koşturulan testlerin sonuçlarını NUnit Test Result Report kullarak test sonuçlarını görebiliriz. Aşagıdaki gibi konfigüre edebilirsiniz.
+ Koşturulan testlerin sonuçlarını NUnit Test Result Report kullarak test sonuçlarını görebiliriz. Aşagıdaki gibi konfigüre edebilirsiniz.
 
 <br>
 
@@ -117,7 +118,7 @@ Adımlara geçmeden öncelikle; Jenkins üzerinde **New Item** diyerek Proje tip
 <br>
 
 > #### - 4.2.2 Publish HTML Report kullanımı
-    Koşturulan testlerin sonuçlarını HTML Report yardımıyla dashboarda yansıtılmış formatıyla grafikler halinde görebilirsiniz. Aşagıdaki gibi konfigüre edebilirsiniz.
+ Koşturulan testlerin sonuçlarını HTML Report yardımıyla dashboarda yansıtılmış formatıyla grafikler halinde görebilirsiniz. Aşagıdaki gibi konfigüre edebilirsiniz.
 
 <br>
 
