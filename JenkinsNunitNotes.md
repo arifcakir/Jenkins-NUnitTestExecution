@@ -71,7 +71,7 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 
 <br>
 
->#### - 4.1.2 Bir Test class'ını koşturmak istiyorsanız 
+>#### - 4.1.2 Bir Test class'ını koşturmak istiyorsanız
 <br>
 
 ```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest"```
@@ -85,7 +85,7 @@ Bu adımda proje içerinde kullanılan paketlerin restore edilerek derlenmesini 
 
 <br>
 
-> #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root altına Test Result xml dokümanını olusturma
+> #### - 4.1.4 Nunit Console ile Belirlenen Methot testi kosturulup, Proje root klasörüne Test Result xml dokümanını olusturmak istiyorsanız
 <br>
 
 ```nunit3-console.exe %WORKSPACE%\Amazon.UITestNUnitTest\Amazon.UITestNUnitTest.csproj --where "class == Amazon.UITestNUnitTest.CreateOrder.CreateOrderTest && method == CreateOrderTechnologyCategory" --result=%WORKSPACE%\TestResults\TestResult.xml```
