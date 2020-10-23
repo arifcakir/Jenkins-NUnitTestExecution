@@ -1,6 +1,6 @@
 # Jenkins ile NUnit Test Koşumu ve Raporlanması 
 
- Selenium WebDriver ile yazdıgınız otomasyon testlerinizi aşağıdaki adımları takip ederek, Jenkins ile tetikleyebilirsiniz.<br>
+ Selenium WebDriver ile yazdıgınız otomasyon testlerinizi aşağıdaki adımları takip ederek, Jenkins ile tetikleyebilir ve CI/CD pipeline'nınıza dahil edebilirsiniz.<br>
 
 ### Konuyu 4 ana başlıkta toplayabiliriz.
 <br>
